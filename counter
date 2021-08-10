@@ -1,0 +1,38 @@
+print("                                 Welcome To My First Project:D")
+print("\n")
+print("Note: To stop the script write \end ")
+print("\n")
+while True:
+
+    user_input = input("Enter Your Word: ")
+
+    if user_input == "\end":
+        break
+    else:
+
+        def foo(user_input):
+            Letters = 0
+            Numbers = 0
+            Spaces = 0
+            Others = 0
+            for s in user_input:
+                if s.isalpha():
+                    Letters += 1
+                elif s.isdigit():
+                    Numbers += 1
+                elif s.isspace():
+                    Spaces += 1
+                else:
+                    Others += 1
+
+            return Letters, Numbers, Spaces, Others
+
+    out = (foo(user_input))
+    L = out[0]
+    N = out[1]
+    S = out[2]
+    O = out[3]
+    print(
+        "Letters Num: {}\nNumbers Count: {}\nSpaces Num: {}\nSpecial Chars: {}"
+        .format(L, N, S, O))
+    print("\n")
